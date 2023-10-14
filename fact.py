@@ -8,7 +8,8 @@ print(fact(6))
 
 def fact_iter(n):
     s=1
-    for i in range(n):
+    for i in range(1,n+1):
         s=s*i
+        print(s)
     return s
-print(fact_iter(7))
+print(fact_iter(4))
