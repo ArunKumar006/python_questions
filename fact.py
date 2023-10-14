@@ -4,3 +4,11 @@ def fact(n):
     else:
         return n * fact(n-1)
 print(fact(6))
+
+
+def fact_iter(n):
+    s=1
+    for i in range(n):
+        s=s*i
+    return s
+print(fact_iter(7))
