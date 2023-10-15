@@ -1,0 +1,14 @@
+import re
+def validate(addr):
+    match=re.match('^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$',addr)
+    if not match:
+        return "Not valid"
+    
+    addr_split=addr.split('.')
+    for i in addr_split:
+        if int(i)<0 or int(i)>256:
+            return "not valid"
+        
+    return "valid"
+
+print(validate("10.133.35.128"))
